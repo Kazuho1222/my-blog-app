@@ -12,20 +12,21 @@ import Link from "next/link"
 function BlogCard() {
   return (
     <div>
-      <Link href="/blog/">
-        <Card>
-          <CardHeader>
-            <CardTitle>おはよう</CardTitle>
-            <CardDescription>今日は2024年8月1日です。</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
-        </Card>
-      </Link>
+      <Card>
+        <CardHeader>
+          <CardTitle>おはよう</CardTitle>
+          <CardDescription>今日は2024年8月1日です。</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>Card Content</p>
+        </CardContent>
+        <CardFooter>
+          <p>Card Footer</p>
+        </CardFooter>
+        <Link href="/blog/" className="px-4 py-4 hover:text-blue-500">
+          Read More
+        </Link>
+      </Card>
     </div>
   )
 }
