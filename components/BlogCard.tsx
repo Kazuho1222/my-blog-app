@@ -1,10 +1,9 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card"
 import Link from "next/link"
 
@@ -15,17 +14,15 @@ function BlogCard() {
       <Card>
         <CardHeader>
           <CardTitle>おはよう</CardTitle>
-          <CardDescription>今日は2024年8月1日です。</CardDescription>
         </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
+        <CardContent className="line-clamp-3">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil aperiam, iure ex repellat odio fugiat, officiis incidunt dolorem at iste nobis maxime ipsum sit reiciendis laudantium alias nemo, modi voluptates.</p>
         </CardContent>
         <CardFooter>
-          <p>Card Footer</p>
+          <Link href="/blog/" className="hover:text-blue-500 pt-4">
+            Read More
+          </Link>
         </CardFooter>
-        <Link href="/blog/" className="px-4 py-4 hover:text-blue-500">
-          Read More
-        </Link>
       </Card>
     </div>
   )

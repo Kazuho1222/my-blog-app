@@ -36,16 +36,6 @@ function page() {
     console.log(values)
   }
   return (
-    // <div className='container mx-auto p-4'>
-    //   <div>
-    //     <input className="hover:outline border-2 rounded-md mb-4 p-2" type='text' placeholder='タイトル'>
-    //     </input>
-    //   </div>
-    //   <div>
-    //     <input className="hover:outline border-2 rounded-md mb-4 p-2" type='content' placeholder='本文'>
-    //     </input>
-    //   </div>
-    // </div>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-1/2 px-4 py-4">
         <FormField
