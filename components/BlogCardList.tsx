@@ -1,14 +1,16 @@
 import BlogCard from './BlogCard'
+import { BlogData } from '@/types/types'
 
-function BlogCardList() {
+interface blogAllDataProps {
+  blogAllData: BlogData[]
+}
+
+const BlogCardList = ({ blogAllData }: blogAllDataProps) => {
   return (
     <div className='flex grid-cols-3 gap-4 p-4'>
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
+      {blogAllData.map((blogData: BlogData) => (
+        <BlogCard key={blogData.id} blogData={blogData} />
+      ))}
     </div>
   )
 }

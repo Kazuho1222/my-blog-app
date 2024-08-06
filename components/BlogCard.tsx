@@ -5,26 +5,36 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card"
+import { BlogData } from "@/types/types"
 import Link from "next/link"
 
+interface BlogDataProps {
+  blogData: BlogData
+}
 
-function BlogCard() {
+const BlogCard = ({ blogData }: BlogDataProps) => {
+  const { id, title, content, createdAt } = blogData
+  const formattedData = new Date(createdAt).toLocaleDateString('ja-JP', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+
   return (
-    <div>
+    <Link href={`/blog/${id}`} className="hover:shadow-lg rounded-md duration-300">
+
       <Card>
         <CardHeader>
-          <CardTitle>おはよう</CardTitle>
+          <CardTitle>{title}</CardTitle>
         </CardHeader>
         <CardContent className="line-clamp-3">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil aperiam, iure ex repellat odio fugiat, officiis incidunt dolorem at iste nobis maxime ipsum sit reiciendis laudantium alias nemo, modi voluptates.</p>
+          {content}
         </CardContent>
-        <CardFooter>
-          <Link href="/blog/" className="hover:text-blue-500 pt-4">
-            Read More
-          </Link>
+        <CardFooter className="flex justify-end pt-4 text-sm">
+          {formattedData}
         </CardFooter>
       </Card>
-    </div>
+    </Link>
   )
 }
 
