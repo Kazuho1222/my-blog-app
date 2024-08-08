@@ -7,7 +7,7 @@ interface blogAllDataProps {
 
 const BlogCardList = ({ blogAllData }: blogAllDataProps) => {
   return (
-    <div className='flex grid-cols-3 gap-4 p-4'>
+    <div className='container flex grid-cols-3 gap-4 p-4'>
       {blogAllData.map((blogData: BlogData) => (
         <BlogCard key={blogData.id} blogData={blogData} />
       ))}

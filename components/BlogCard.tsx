@@ -21,7 +21,7 @@ const BlogCard = ({ blogData }: BlogDataProps) => {
   })
 
   return (
-    <Link href={`/blog/${id}`} className="hover:shadow-lg rounded-md duration-300">
+    <Link href={`/blog/${id}`} className="hover:shadow-lg rounded-md duration-300 hover:divide-slate-500">
 
       <Card>
         <CardHeader>
